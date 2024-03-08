@@ -8,6 +8,9 @@ class AppTheme {
       listTileTheme: const ListTileThemeData(
         iconColor: seedColor,
       ),
+      appBarTheme: const AppBarTheme(
+        centerTitle: true,
+      ),
     );
   }
 }
