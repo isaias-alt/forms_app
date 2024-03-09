@@ -11,7 +11,7 @@ class CounterState extends Equatable {
 
   copyWith({int? counter, int? transactionCount}) => CounterState(
         counter: counter ?? this.counter,
-        transactionCount: transactionCount = this.transactionCount,
+        transactionCount: transactionCount ?? this.transactionCount,
       );
 
   @override
