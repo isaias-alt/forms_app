@@ -30,9 +30,7 @@ class _CubitCounterView extends StatelessWidget {
         }),
         actions: [
           IconButton(
-            onPressed: () {
-              context.read<CounterCubit>().reset();
-            },
+            onPressed: () => context.read<CounterCubit>().reset(),
             icon: const Icon(Icons.refresh_rounded),
           )
         ],
@@ -48,9 +46,10 @@ class _CubitCounterView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-              heroTag: '1',
-              child: const Text('+3'),
-              onPressed: () => increaseCounterBy(context, 3)),
+            heroTag: '1',
+            child: const Text('+3'),
+            onPressed: () => increaseCounterBy(context, 3),
+          ),
           const SizedBox(height: 10),
           FloatingActionButton(
             heroTag: '2',
@@ -59,9 +58,10 @@ class _CubitCounterView extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           FloatingActionButton(
-              heroTag: '3',
-              child: const Text('+1'),
-              onPressed: () => increaseCounterBy(context)),
+            heroTag: '3',
+            child: const Text('+1'),
+            onPressed: () => increaseCounterBy(context),
+          ),
         ],
       ),
     );
